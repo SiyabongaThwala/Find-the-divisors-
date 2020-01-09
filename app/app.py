@@ -1,10 +1,7 @@
+def divisors(num):
+    l = [a for a in range(2,num) if num%a == 0]
+    if len(l) == 0:
+        return str(num) + " is prime"
+    print(l)
 
-def divisors(n):
-    lst = []
-    for i in range(2,int(n/2)+1):
-        if n % i ==0:
-            lst.append(i)
-    print(lst)         
-
-    
 divisors(20)
