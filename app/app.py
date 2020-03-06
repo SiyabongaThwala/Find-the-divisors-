@@ -1,29 +1,28 @@
-# def divisors(num):
-#     l = [a for a in range(2,num) if num%a == 0]
-#     if len(l) == 0:
-#         return str(num) + " is prime"
-#     print(l)
-
-# divisors(20)
-
-# def last_digit(num1,num2):
-#     exponent= pow(num1 , num2)
-#     NewList=[int(x) for x in str(exponent)]
-#     print(NewList[-1])
-
-# last_digit(10,10**10)
-
-def alphanumeric(password):
-    digits = [0,1,2,3,4,5,6,7,8,9]
-    excluded = ["",'_']
-    UpperPassWord = password.upper()
+# def people_in_the_bus(bus_stops):
+#     people_getting_in = 0
+#     people_getting_out = 0
+#     people_left = 0
     
-    NewPassword = list(UpperPassWord)
+#     for item in bus_stops:
+#         people_getting_in += item[0]
 
-    for item in digits:
-        if str(item) in UpperPassWord:
-            print('pass')
-        else:
-            print('fail')    
+#     for item in bus_stops:
+#         people_getting_out += item[1]
 
-alphanumeric("PassW0rd")                        
+#     people_left = people_getting_in - people_getting_out
+#     print(people_left)
+
+# people_in_the_bus([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]])    
+
+
+def anagrams(word,words):
+    sorted_word = sorted(word)
+    new_list = []
+    for item in words:
+        if sorted(item) == sorted_word:
+            new_list.append(item)
+
+    print(new_list)
+
+
+anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer'])   
